@@ -12,7 +12,7 @@ ENV ENVIRONMENT=${ENVIRONMENT}
 # http://192.168.0.12:9000
 # squ_9c39e10226fd4fdcc220eb310c76a92c8523b482
 RUN mvn package
-RUN if [ "$ENVIRONMENT" = "prod" ] ; then mvn sonar:sonar -Dsonar.host.url=${SONARQUBE_URL} -Dsonar.login=${SONARQUBE_TOKEN}; else echo "$SONARQUBE_ENV no envia a sonar"; fi
+RUN if [ "$ENVIRONMENT" = "prod" ] ; then mvn sonar:sonar -Dsonar.host.url=${SONARQUBE_URL} -Dsonar.login=${SONARQUBE_TOKEN}; else echo "$ENVIRONMENT no envia a sonar"; fi
 ENV SONARQUBE_TOKEN=''
 ENV SONARQUBE_URL=''
 
