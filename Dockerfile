@@ -3,12 +3,12 @@ FROM public.ecr.aws/docker/library/maven:3-amazoncorretto-17 AS build
 WORKDIR /project
 ADD pom.xml /project
 COPY . .
-ARG SONARQUBE_TOKEN
-ENV SONARQUBE_TOKEN=${SONARQUBE_TOKEN}
-ARG SONARQUBE_URL
-ENV SONARQUBE_URL=${SONARQUBE_URL}
-ARG ENVIRONMENT
-ENV ENVIRONMENT=${ENVIRONMENT}
+ARG sonarqube_token
+ENV SONARQUBE_TOKEN=${sonarqube_token}
+ARG sonarqube_url
+ENV SONARQUBE_URL=${sonarqube_url}
+ARG environment
+ENV ENVIRONMENT=${environment}
 # http://192.168.0.12:9000
 # squ_9c39e10226fd4fdcc220eb310c76a92c8523b482
 RUN mvn package
