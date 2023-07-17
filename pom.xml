@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.frubana.devops</groupId>
-	<artifactId>devops_tooling_simple-mvn-service-splitview</artifactId>
+	<artifactId>demo</artifactId>
 	<version>0.0.1</version>
 	<name>devops_tooling_simple-mvn-service-splitview</name>
 	<description>Demo project for Spring Boot</description>
@@ -17,6 +17,8 @@
 		<java.version>17</java.version>
 		<!-- JaCoCo Properties -->
 		<jacoco.version>0.8.10</jacoco.version>
+		<!-- SonarQube Properties -->
+		<sonar.projectName>devops_tooling_simple-mvn-service-splitview</sonar.projectName>
 		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
 		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
 		<sonar.language>java</sonar.language>
