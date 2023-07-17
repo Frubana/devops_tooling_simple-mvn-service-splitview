@@ -10,7 +10,7 @@ ENV SONARQUBE_URL=${SONARQUBE_URL}
 ARG SONARQUBE_ENV
 ENV SONARQUBE_ENV=${SONARQUBE_ENV}
 RUN mvn clean package
-RUN if [ "$SONARQUBE_ENV" = "prod" ] ; then mvn sonar:sonar -Pcoverage -Dsonar.host.url=${SONARQUBE_URL} -Dsonar.login=${SONARQUBE_TOKEN}; else echo "${SONARQUBE_ENV} no envia a sonar"; fi
+RUN if [ "$SONARQUBE_ENV" = "prod" ] ; then mvn sonar:sonar -Dsonar.host.url=${SONARQUBE_URL} -Dsonar.login=${SONARQUBE_TOKEN}; else echo "${SONARQUBE_ENV} no envia a sonar"; fi
 ENV SONARQUBE_TOKEN=''
 ENV SONARQUBE_URL=''
 
