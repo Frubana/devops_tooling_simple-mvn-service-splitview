@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.frubana.devops</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>devops_tooling_simple-mvn-service-splitview</artifactId>
 	<version>0.0.1</version>
-	<name>demo</name>
+	<name>devops_tooling_simple-mvn-service-splitview</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
